@@ -7,6 +7,7 @@ const createData = async (req, res) => {
     if (!link || !description || !userName) {
       return res.status(400).json({ error: 'All fields are required' });
     }
+    
 
     const newData = await prisma.userData.create({
       data: {
