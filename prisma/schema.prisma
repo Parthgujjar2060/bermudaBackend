@@ -1,0 +1,15 @@
+datasource db {
+  provider = "mysql"
+  url  = "mysql://root:3693@localhost:3306/mydb"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model UserData {
+  id  String      @id @default(uuid())
+  link String
+  description String
+  userName    String
+}
